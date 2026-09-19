@@ -1,0 +1,69 @@
+{
+  "name": "@dsh-plugins/chatting-tree",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chatting tree: a DSH Web plugin that draws every decision the assistant offered, the branch you took, and a fork-back-to-continue path over the conversation's session lineage.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "client-plugin",
+    "web-ui",
+    "sidebar",
+    "conversation",
+    "session-fork",
+    "event-graph"
+  ],
+  "homepage": "https://github.com/OWNER/chatting-tree#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/chatting-tree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OWNER/chatting-tree/issues"
+  },
+  "author": "OWNER",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "verify.mjs",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "verify": "node verify.mjs"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-resources",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

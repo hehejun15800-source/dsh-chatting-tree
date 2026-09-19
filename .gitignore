@@ -1,0 +1,20 @@
+# Dependencies — the plugin ships its built browser half, so a checkout needs none.
+node_modules/
+
+# Harness state — sessions, credentials, profiles. Never publish these.
+.dsh/
+profiles/
+sessions/
+storages/
+*.credentials.yaml
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and scratch
+*.log
+.tmp/
