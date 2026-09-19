@@ -39,7 +39,7 @@ chatting-tree 是**客户端插件**：DSH 加载器通过包里的 `dsh.client`
 1. **让 profile 能解析到它**（检出 + `$DSH_HOME` 软链是最省事的做法）：
 
    ```sh
-   git clone https://github.com/OWNER/chatting-tree.git ~/.dsh/plugins/chatting-tree
+   git clone https://github.com/hehejun15800-source/chatting-tree.git ~/.dsh/plugins/chatting-tree
    mkdir -p ~/.dsh/profiles/node_modules/@dsh-plugins
    ln -sfn ~/.dsh/plugins/chatting-tree \
            ~/.dsh/profiles/node_modules/@dsh-plugins/chatting-tree

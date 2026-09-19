@@ -46,7 +46,7 @@ Nothing is compiled or fetched at runtime — `lib/` is the shipped artifact.
    symlink is the least invasive:
 
    ```sh
-   git clone https://github.com/OWNER/chatting-tree.git ~/.dsh/plugins/chatting-tree
+   git clone https://github.com/hehejun15800-source/chatting-tree.git ~/.dsh/plugins/chatting-tree
    mkdir -p ~/.dsh/profiles/node_modules/@dsh-plugins
    ln -sfn ~/.dsh/plugins/chatting-tree \
            ~/.dsh/profiles/node_modules/@dsh-plugins/chatting-tree
