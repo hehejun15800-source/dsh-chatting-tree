@@ -1,0 +1,27 @@
+name: verify
+
+# The plugin ships its built browser half, so there is nothing to install and the
+# check is a single host-free Node script. It runs on push and pull request.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Verify the shipped bundle
+        run: node verify.mjs
