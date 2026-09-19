@@ -39,7 +39,7 @@ chatting-tree 是**客户端插件**：DSH 加载器通过包里的 `dsh.client`
 1. **让 profile 能解析到它**（检出 + `$DSH_HOME` 软链是最省事的做法）：
 
    ```sh
-   git clone https://github.com/hehejun15800-source/chatting-tree.git ~/.dsh/plugins/chatting-tree
+   git clone https://github.com/hehejun15800-source/dsh-chatting-tree.git ~/.dsh/plugins/chatting-tree
    mkdir -p ~/.dsh/profiles/node_modules/@dsh-plugins
    ln -sfn ~/.dsh/plugins/chatting-tree \
            ~/.dsh/profiles/node_modules/@dsh-plugins/chatting-tree
@@ -109,7 +109,8 @@ node verify.mjs      # 或 npm run verify
 ```
 
 它用一层小 shim 在 Node 里加载真实 bundle，检查注册项、事件折叠（选项回接、畸形事件窗口）
-与打开策略（展开 → 打开 → 重试 → 上报）。
+与打开策略（展开 → 打开 → 重试 → 上报）。CI 在每次 push / PR 时对 Node 20、22、24 跑同一份脚本
+（[`.github/workflows/verify.yml`](.github/workflows/verify.yml)）。
 
 ## 兼容性
 

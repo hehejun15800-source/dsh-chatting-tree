@@ -1,5 +1,7 @@
 # chatting-tree
 
+[![verify](https://github.com/hehejun15800-source/dsh-chatting-tree/actions/workflows/verify.yml/badge.svg)](https://github.com/hehejun15800-source/dsh-chatting-tree/actions/workflows/verify.yml)
+
 A **DeepSeek Harness (DSH) Web client plugin** that turns a conversation into a decision
 tree you can walk back into.
 
@@ -46,7 +48,7 @@ Nothing is compiled or fetched at runtime — `lib/` is the shipped artifact.
    symlink is the least invasive:
 
    ```sh
-   git clone https://github.com/hehejun15800-source/chatting-tree.git ~/.dsh/plugins/chatting-tree
+   git clone https://github.com/hehejun15800-source/dsh-chatting-tree.git ~/.dsh/plugins/chatting-tree
    mkdir -p ~/.dsh/profiles/node_modules/@dsh-plugins
    ln -sfn ~/.dsh/plugins/chatting-tree \
            ~/.dsh/profiles/node_modules/@dsh-plugins/chatting-tree
@@ -123,7 +125,8 @@ node verify.mjs      # or: npm run verify
 
 It loads the real bundle in Node with a small shim and checks the registrations, the graph
 fold (option joining, hostile event windows), and the reveal plan (expand → open → retry →
-report).
+report). CI runs the same script on every push and pull request against Node 20, 22, and 24
+([`.github/workflows/verify.yml`](.github/workflows/verify.yml)).
 
 ## Compatibility
 

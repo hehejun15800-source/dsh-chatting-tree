@@ -1,6 +1,6 @@
 {
   "name": "@dsh-plugins/chatting-tree",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Chatting tree: a DSH Web plugin that draws every decision the assistant offered, the branch you took, and a fork-back-to-continue path over the conversation's session lineage.",
   "keywords": [
@@ -15,13 +15,13 @@
     "session-fork",
     "event-graph"
   ],
-  "homepage": "https://github.com/hehejun15800-source/chatting-tree#readme",
+  "homepage": "https://github.com/hehejun15800-source/dsh-chatting-tree#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hehejun15800-source/chatting-tree.git"
+    "url": "git+https://github.com/hehejun15800-source/dsh-chatting-tree.git"
   },
   "bugs": {
-    "url": "https://github.com/hehejun15800-source/chatting-tree/issues"
+    "url": "https://github.com/hehejun15800-source/dsh-chatting-tree/issues"
   },
   "author": "hehejun15800-source",
   "type": "module",
